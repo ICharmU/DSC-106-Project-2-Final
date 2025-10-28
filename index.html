@@ -225,10 +225,29 @@
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>Summarize with 5 bins and plot each bin's median with an IQR ribbon - reduces overplotting near 90–100% and emphasizes central tendency</li>
-          <li>Fade and shrink raw points as x tends to 100% - De-emphasizes the dense cluster at high 'no-clinic' percentages so attention stays on the summarized bands rather than
-          on potentially contrary individual states</li>
-          <li>Tighten the y-axis to the IQR envelope and the x axis to the bounds of the bins</li>
+          <li>
+            <strong>Summarize with 5 bins; show connected bin medians + IQR ribbon.</strong>
+            We partition the x-axis (% of counties without a clinic) into five fixed ranges, then plot each bin's median resident
+            rate and its interquartile range. Connecting the medians creates an easy-to-follow 'profile line', while the ribbons
+            communicate spread without exposing every outlier. This reduces overplotting near 90–100% and subtly centers attention
+            on central tendency rather than extremes.
+            <b>(Score = -0.5)</b>
+          </li>
+          <li>
+            <strong>Fade and shrink raw points as access scarcity increases.</strong>
+            Because many states cluster at high "no-clinic" percentages (due to clinics concentrating in metro counties), we
+            gradually decrease point size and opacity as x→100%. This keeps the background context visible but visually subordinate,
+            so readers anchor on the summarized medians/ribbons instead of potentially contrary individual states in the
+            bottom-right cluster.
+            <b>(Score = -2)</b>
+          </li>
+          <li>
+            <strong>Tighten the y-axis to the IQR envelope and clamp x to bin bounds.</strong>
+            We set the vertical limits just beyond the combined IQR band and restrict the horizontal range to the five bins in view.
+            This removes empty margin, increases the apparent overlap of the ribbons, and visually compresses differences between
+            bins—supporting the claim of “no clear separation” while still staying within a plausible scaling choice.
+            <b>(Score = -1)</b>
+          </li>
         </ul>
       </section>
 
@@ -250,7 +269,7 @@
           We learned that small, defensible choices can strongly shape perception even when the underlying relationship is weak.
           For the against view, binning the access variable and showing connected medians + IQR bands emphasized overlapping
           central tendencies, while a tighter y-range and faded raw points near 90–100% guided attention away from dense,
-          potentially contrary individual states. Ethically, we disclosed scope (“legally recorded abortions only”) and labeled
+          potentially contrary individual states. Ethically, we disclosed scope ("legally recorded abortions only") and labeled
           the summaries, but we recognize that connecting medians and compressing the scale are persuasive choices that can
           downplay within-bin variance.
           <br>
