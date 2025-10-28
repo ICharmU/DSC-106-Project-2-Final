@@ -148,11 +148,14 @@
         Persuasive or Deceptive Visualization?
       </h1>
 
-      <p><strong>Your Name</strong> — <em>Your UCSD Email Address</em></p>
+      <p><strong>Timothy Harmon</strong> — <em>Your UCSD Email Address</em></p>
+      <p><strong>Uzair Gheewala</strong> — <em>ugheewala@ucsd.edu</em></p>
+      <p><strong>Odessa</strong> — <em>Your UCSD Email Address</em></p>
+      <p><strong>Uday</strong> — <em>Your UCSD Email Address</em></p>
     </header>
 
     <main>
-      <h2>Proposition: [STATE PROPOSITION]</h2>
+      <h2>Proposition: Abortion clinic availability is linked to decrease in overall abortion rates</h2>
 
       <section>
         <h3>FOR the Proposition</h3>
@@ -175,23 +178,37 @@
         <h3>AGAINST the Proposition</h3>
 
         <figure>
-          <img src="./template_files/IMAGE_FILENAME" alt="">
-          <figcaption>BRIEF CAPTION HERE.</figcaption>
+          <img src="./template_files/propC_against_flat.png" alt="">
+          <figcaption>The median resident abortion rate stays within a narrow range and the IQR ribbons overlap
+          widely, indicating no clear separation of outcomes by clinic availability when measured at the state level.</figcaption>
         </figure>
 
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>Summarize with 5 bins and plot each bin's median with an IQR ribbon - reduces overplotting near 90–100% and emphasizes central tendency</li>
+          <li>Fade and shrink raw points as x tends to 100% - De-emphasizes the dense cluster at high 'no-clinic' percentages so attention stays on the summarized bands rather than
+          on potentially contrary individual states</li>
+          <li>Tighten the y-axis to the IQR envelope and the x axis to the bounds of the bins</li>
         </ul>
       </section>
 
       <section>
         <h2>Final Reflection</h2>
 
-        <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+        <!-- For -->
+        <p>
+        </p>
+
+        <!-- Against -->
+        <p>
+          We learned that small, defensible choices can strongly shape perception even when the underlying relationship is weak.
+          For the against view, binning the access variable and showing connected medians + IQR bands emphasized overlapping
+          central tendencies, while a tighter y-range and faded raw points near 90–100% guided attention away from dense,
+          potentially contrary individual states. Ethically, we disclosed scope (“legally recorded abortions only”) and labeled
+          the summaries, but we recognize that connecting medians and compressing the scale are persuasive choices that can
+          downplay within-bin variance.
+        </p>
       </section>
     </main>
   
