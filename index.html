@@ -148,26 +148,53 @@
         Persuasive or Deceptive Visualization?
       </h1>
 
-      <p><strong>Your Name</strong> — <em>Your UCSD Email Address</em></p>
+      <p><strong>Uzair Gheewala, Odessa Castillo, Uday Lingampalli, Sean Harmon</strong> — <em>ugheewala@ucsd.edu, odcastillo@ucsd.edu, ulingampalli@ucsd.edu, t2harmon@ucsd.edu</em></p>
     </header>
 
     <main>
-      <h2>Proposition: [STATE PROPOSITION]</h2>
+      <h2>Proposition: Abortion clinic availability is linked to a decrease in abortion rates</h2>
 
       <section>
         <h3>FOR the Proposition</h3>
 
         <figure>
-          <img src="./template_files/IMAGE_FILENAME" alt="">
+          <img src="./plots/IMAGE_FILENAME" alt="">
           <figcaption>BRIEF CAPTION HERE.</figcaption>
         </figure>
 
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>
+            Reversed x-axis: this is somewhat truthful in the sense of showing a decrease. The goal here was to highlight
+            the decrease in abortion rates. By changing the perspective of decrease to be the "positive" x-direction the negative
+            association is more quickly made.
+            We considered flipping the y-axis instead. This did produce a trendline with a similar slope, but the decrease was not as well highlighted.
+            <b>(Score = 0.5)</b>
+          </li>
+          <li>
+            Only Eastern states with a net removal of abortion clinics were shown. The goal here was to find some general
+            US region that shared a similar change over the 3 years. This plot involved a bit of cherry picking as we tested
+            all cardinal directions and this subset had the most obvious trend with three "clusters" (Rhode Island isn't really a cluster,
+            but it connects well to the trendline). After selecting these Eastern states we further subsetted for states where 
+            US states and not subsetting by region, however this trend line wasn't as strong due to the cluster of states around 
+            x=0 which had a net change of 0 abortion clinics.
+            <b>(Score = -2)</b>
+            <br>To be clear, the following states were included
+            under the Eastern grouping (even if they weren't plotted once we subsetted for a decrease in clinics): Maine, Vermont, 
+            New Hampshire, Massachusetts, Rhode Island, New York, Connecticut, New Jersey, Pennsylvania, Delaware, Maryland, 
+            Virginia, West Virginia, North Carolina, South Carolina, Georgia, and Florida. 
+          </li>
+          <li>
+            The change reported is over a specific 3 year period which may not reflect larger trends across presidencies. We chose 2017-2020 
+            as opposed to other years as this time frame included the start of a new president who brought new ideas on abortion policy. 
+            Since the changes were almost across Trump's entire term, this seemed to be a good indicator of the immediate impact of
+            his policies.
+            <b>(Score = 1)</b>
+          </li>
+          <li>
+            
+          </li>
         </ul>
       </section>
 
@@ -175,7 +202,7 @@
         <h3>AGAINST the Proposition</h3>
 
         <figure>
-          <img src="./template_files/IMAGE_FILENAME" alt="">
+          <img src="./plots/IMAGE_FILENAME" alt="">
           <figcaption>BRIEF CAPTION HERE.</figcaption>
         </figure>
 
