@@ -138,6 +138,16 @@
           }
         }
       }
+
+      figure > img,
+      img.plot {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        width: min(100%, 900px); /* tweak 900px to taste (e.g., 720px or 800px) */
+        max-height: 70vh;       /* prevents super-tall images */
+        margin-inline: auto;
+      }
     </style>
   </head>
 
@@ -202,7 +212,7 @@
         <h3>AGAINST the Proposition</h3>
 
         <figure>
-          <img src="./template_files/propC_against_flat.png" alt="">
+          <img class="plot" src="./template_files/propC_against_flat.png" alt="" loading="lazy">
           <figcaption>The median resident abortion rate stays within a narrow range and the IQR ribbons overlap
           widely, indicating no clear separation of outcomes by clinic availability when measured at the state level.</figcaption>
         </figure>
